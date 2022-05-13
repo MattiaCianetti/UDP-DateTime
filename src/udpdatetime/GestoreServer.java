@@ -7,15 +7,15 @@ package udpdatetime;
 
 /**
  *
- * @author MattiaCianetti
+ * @author CianettiMattia
  */
-public class UDPDateTime {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class GestoreServer 
+{
+    public static void main(String[] args)
+     {
+        UDPServer s = new UDPServer();
+        s.ascolto();
+        s.scrivi();
+        s.leggi();
     }
-    
 }

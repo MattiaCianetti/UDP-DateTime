@@ -6,7 +6,7 @@
 package udpdatetime;
 /**
  *
- * @author MattiaCianetti
+ * @author CianettiMattia
  */
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -14,10 +14,10 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.logging.Logger;
 
 public class UDPClient {
 
-	public static void main(String[] args) {
 		//numero di porta
 		int port = 2000;
 		//indirizzo del server
@@ -36,7 +36,7 @@ public class UDPClient {
 		//messaggio di risposta
 		String response;
 		
-		
+		public void scrivi(){
 		try {
 		
 		/*
@@ -53,7 +53,20 @@ public class UDPClient {
 			
 			//si inviano i dati
 			dSocket.send(outPacket);
-			
+                        
+                        
+                }catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+                }
+                        
+                        
+        public void leggi(){
+        try {
 			//si prepara il buffer di ricezione
 			buffer = new byte[256];
 			//e il datagramma UDP per ricevere i dati del buffer
